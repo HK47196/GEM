@@ -1,0 +1,104 @@
+/* Styles for application windows */
+
+.window {
+    position: absolute;
+    /* Use border variables for 3D effect */
+    border-top: 1px solid var(--gem-window-border-outer);
+    border-left: 1px solid var(--gem-window-border-outer);
+    border-bottom: 1px solid var(--gem-window-border-inner);
+    border-right: 1px solid var(--gem-window-border-inner);
+    background-color: var(--gem-bg-primary);
+    /* Add inner black border */
+    outline: 1px solid var(--gem-window-border);
+    outline-offset: -1px; /* Place outline inside the main border */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    min-width: 150px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent content spillover */
+}
+
+.window-titlebar {
+    background-color: var(--gem-window-title-bg);
+    color: var(--gem-text-light);
+    padding: 4px 6px;
+    font-weight: bold;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 24px; /* Example height */
+    border-bottom: 1px solid var(--gem-window-border); /* Separator line */
+}
+
+.window-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.window-controls button {
+    /* Basic 3D button style */
+    background: var(--gem-bg-primary);
+    border-top: 1px solid var(--gem-window-border-outer);
+    border-left: 1px solid var(--gem-window-border-outer);
+    border-bottom: 1px solid var(--gem-window-border-inner);
+    border-right: 1px solid var(--gem-window-border-inner);
+    outline: 1px solid var(--gem-window-border);
+    outline-offset: -1px;
+    color: var(--gem-text-dark);
+    margin-left: 3px; /* Increased spacing */
+    padding: 0px 4px; /* Adjust padding */
+    min-width: 18px; /* Ensure minimum width */
+    height: 16px; /* Match typical GEM control height */
+    line-height: 14px; /* Center text vertically */
+    font-size: 10px; /* Smaller font for controls */
+    text-align: center;
+    font-family: monospace; /* Use monospace for better placeholder alignment */
+    font-weight: bold;
+    cursor: pointer;
+    /* Remove default button appearance */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Specific styles for placeholder controls */
+/* .window-controls .close-button { } */
+/* .window-controls .maximize-button { } */
+/* .window-controls .minimize-button { } */
+
+.window-controls button:active {
+    /* Inverted border for pressed state */
+    border-top: 1px solid var(--gem-window-border-inner);
+    border-left: 1px solid var(--gem-window-border-inner);
+    border-bottom: 1px solid var(--gem-window-border-outer);
+    border-right: 1px solid var(--gem-window-border-outer);
+    background-color: #b0b0b0; /* Slightly darker gray */
+}
+
+.window-content {
+    flex-grow: 1;
+    padding: 5px;
+    overflow: auto; /* Allow scrolling if content exceeds window size */
+}
+
+/* .window.active .window-titlebar { } */
+
+/* Resize Handles (Hidden by default) */
+.window-resize-handle {
+    position: absolute;
+    background: transparent; /* Invisible */
+    z-index: 1; /* Above content, below title bar potentially */
+}
+
+.window-resize-handle.corner-bottom-right {
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    cursor: nwse-resize;
+}
+
+/* Add other handles as needed (corner-bottom-left, corner-top-right, corner-top-left, edge-*) */

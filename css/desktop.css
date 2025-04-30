@@ -1,0 +1,66 @@
+/* Styles for the main desktop area */
+
+#desktop {
+    position: absolute;
+    /* Move below the menu bar */
+    top: 20px; /* Match menu bar height */
+    left: 0;
+    width: 100%;
+    /* Adjust for top menu bar */
+    height: calc(100% - 20px);
+    /* background-color: var(--gem-desktop-bg); */ /* Defined in theme.css */
+    /* background-image: var(--gem-desktop-pattern); */ /* Defined in theme.css */
+    /* background-repeat: repeat; */
+    overflow: hidden; /* Hide anything that might overflow */
+    padding: 10px; /* Padding for icons */
+    /* Grid layout for icons */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust minmax for icon size + padding */
+    grid-template-rows: repeat(auto-fill, minmax(80px, 1fr)); /* Adjust minmax for icon size + padding */
+    grid-auto-flow: column dense; /* Fill columns first, then rows */
+    gap: 10px; /* Spacing between grid cells */
+    align-content: start; /* Align items to the top */
+    justify-content: start; /* Align items to the left */
+}
+
+/* Styles for desktop icons */
+.desktop-icon {
+    width: 70px; /* Icon container width */
+    height: 70px; /* Icon container height */
+    /* margin: 10px; */ /* Replaced by grid gap */
+    /* float: left; */ /* Replaced by grid */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Indicate interactivity */
+    padding: 5px;
+    overflow: hidden; /* Prevent text overflow */
+}
+
+.desktop-icon img {
+    width: 32px; /* Standard icon size */
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+.desktop-icon span {
+    font-size: 11px; /* Smaller font for icon labels */
+    color: var(--gem-text-dark);
+    white-space: normal; /* Allow text wrapping */
+    word-wrap: break-word;
+    line-height: 1.2;
+    max-height: 2.4em; /* Limit to roughly 2 lines */
+    overflow: hidden;
+}
+
+/* Placeholder for selected state */
+.desktop-icon.selected {
+    background-color: var(--gem-highlight);
+    outline: 1px dotted var(--gem-text-light);
+}
+
+.desktop-icon.selected span {
+    color: var(--gem-text-light);
+}

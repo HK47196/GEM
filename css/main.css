@@ -1,0 +1,58 @@
+/* Global styles for the application */
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Prevent body scrollbars */
+    margin: 0;
+    padding: 0;
+    user-select: none; /* Prevent text selection outside of inputs */
+    cursor: default; /* Default GEM cursor */
+    /* Center the screen element */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Dark background outside the screen */
+}
+
+#screen {
+    width: 640px;
+    height: 480px;
+    position: relative; /* Needed for absolute positioning of children */
+    overflow: hidden; /* Clip content outside the screen bounds */
+    border: 1px solid #000; /* Optional: border for the screen */
+    background-color: var(--vga-black); /* Default screen background */
+}
+
+/* Ensure children fill the screen */
+#desktop,
+#taskbar,
+#window-container {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+#taskbar {
+    top: 0;
+    /* height and other styles remain */
+}
+
+#desktop {
+    top: 20px; /* Below menu bar */
+    height: calc(100% - 20px);
+    /* background styles remain */
+}
+
+#window-container {
+    top: 20px; /* Below menu bar */
+    height: calc(100% - 20px);
+    pointer-events: none; /* Allow clicks to pass through to desktop/windows */
+}
+
+#window-container > .window {
+    pointer-events: auto; /* Windows should capture clicks */
+}
+
+/* Add other global styles as needed */

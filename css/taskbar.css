@@ -1,0 +1,39 @@
+/* Styles for the taskbar (Menu Bar in GEM 1.x) */
+
+#taskbar {
+    position: absolute;
+    /* bottom: 0; */ /* Move to top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px; /* Typical GEM menu bar height */
+    background-color: var(--gem-bg-primary);
+    /* Apply 3D border effect (inverted for top bar) */
+    border-bottom: 1px solid var(--gem-window-border-inner);
+    /* border-top: 1px solid var(--gem-window-border-outer); */ /* No top border needed */
+    border-left: none;
+    border-right: none;
+    /* Inner black line */
+    /* outline: 1px solid var(--gem-window-border); */ /* May not be needed for top bar */
+    /* outline-offset: -1px; */
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    z-index: 100; /* Ensure it's above desktop content */
+}
+
+/* Styles for menu items (e.g., Desk, File, View) */
+.menu-item {
+    padding: 2px 8px;
+    margin: 0 2px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative; /* For dropdown menus */
+}
+
+.menu-item:hover {
+    background-color: var(--gem-highlight);
+    color: var(--gem-text-light);
+}
+
+/* Add styles for dropdown menus later */

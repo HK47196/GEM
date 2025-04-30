@@ -1,0 +1,56 @@
+:root {
+    /* Standard 16-Color VGA Palette */
+    --vga-black: #000000;
+    --vga-blue: #0000AA;
+    --vga-green: #00AA00;
+    --vga-cyan: #00AAAA;
+    --vga-red: #AA0000;
+    --vga-magenta: #AA00AA;
+    --vga-brown: #AA5500; /* Often appears as dark yellow */
+    --vga-light-gray: #AAAAAA;
+    --vga-dark-gray: #555555;
+    --vga-bright-blue: #5555FF;
+    --vga-bright-green: #55FF55;
+    --vga-bright-cyan: #55FFFF;
+    --vga-bright-red: #FF5555;
+    --vga-bright-magenta: #FF55FF;
+    --vga-yellow: #FFFF55;
+    --vga-white: #FFFFFF;
+
+    /* GEM 1.x Color Palette using VGA */
+    --gem-bg-primary: var(--vga-light-gray); /* Light gray */
+    --gem-window-title-bg: var(--vga-blue); /* Dark blue */
+    --gem-window-border: var(--vga-black); /* Black */
+    --gem-window-border-outer: var(--vga-white); /* White for top/left outset */
+    --gem-window-border-inner: var(--vga-dark-gray); /* Dark Gray for bottom/right outset */
+    --gem-desktop-bg: var(--vga-light-gray); /* Placeholder - will be replaced with pattern */
+    --gem-text-dark: var(--vga-black); /* Black */
+    --gem-text-light: var(--vga-white); /* White */
+    --gem-highlight: var(--vga-blue); /* Blue */
+
+    /* Dithered pattern using VGA colors */
+    --gem-desktop-pattern-color1: var(--vga-light-gray);
+    --gem-desktop-pattern-color2: var(--vga-dark-gray); /* Use dark gray for dither */
+
+    /* Font */
+    --gem-font-family: 'Geneva', 'Arial', sans-serif; /* Example font stack */
+    --gem-font-size: 12px;
+}
+
+/* Basic element styling using variables */
+body {
+    /* background-color: var(--gem-desktop-bg); */ /* Pattern replaces solid color */
+    /* background-image: var(--gem-desktop-pattern); */
+    /* Simple 2x2 pixel checkerboard pattern simulation */
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--gem-desktop-pattern-color1),
+        var(--gem-desktop-pattern-color1) 1px,
+        var(--gem-desktop-pattern-color2) 1px,
+        var(--gem-desktop-pattern-color2) 2px
+    );
+    background-size: 2px 2px;
+    font-family: var(--gem-font-family);
+    font-size: var(--gem-font-size);
+    color: var(--gem-text-dark);
+}
