@@ -20,22 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add initial setup logic, like creating default desktop icons
     desktop.addIcon(
         "Trash",
-        "assets/icons/desktop/trash_empty.png",
+        "assets/icons/trash.png", // Updated path
         () => windowManager.createWindow({ title: "Trash", content: "Trash is empty." })
     );
     desktop.addIcon(
         "Hard Disk",
-        "assets/icons/desktop/hard_disk.png",
+        "assets/icons/hard disk.png", // Updated path
         () => windowManager.createWindow({ title: "Hard Disk", content: "File Browser Content..." })
     );
     desktop.addIcon(
         "Text Editor",
-        "assets/icons/desktop/text_editor.png",
+        "assets/icons/text file.png", // Updated path (using text file icon)
         () => windowManager.createWindow({ title: "Text Editor", content: "<textarea style='width:100%; height: 100%; border: none; resize: none;'></textarea>" })
     );
     desktop.addIcon(
         "Calculator",
-        "assets/icons/desktop/calculator.png",
+        "assets/icons/file.png", // Updated path (using generic file icon as placeholder)
         () => windowManager.createWindow({ title: "Calculator", content: "Calculator UI..." })
     );
 
