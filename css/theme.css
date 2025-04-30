@@ -18,19 +18,19 @@
     --vga-white: #FFFFFF;
 
     /* GEM 1.x Color Palette using VGA */
-    --gem-bg-primary: var(--vga-light-gray); /* Light gray */
-    --gem-window-title-bg: var(--vga-blue); /* Dark blue */
-    --gem-window-border: var(--vga-black); /* Black */
-    --gem-window-border-outer: var(--vga-white); /* White for top/left outset */
-    --gem-window-border-inner: var(--vga-dark-gray); /* Dark Gray for bottom/right outset */
+    --gem-bg-primary: var(--vga-light-gray);
+    --gem-window-title-bg: var(--vga-blue);
+    --gem-window-border: var(--vga-black);
+    --gem-window-border-outer: var(--vga-white);
+    --gem-window-border-inner: var(--vga-dark-gray);
     --gem-desktop-bg: var(--vga-light-gray); /* Placeholder - will be replaced with pattern */
-    --gem-text-dark: var(--vga-black); /* Black */
-    --gem-text-light: var(--vga-white); /* White */
-    --gem-highlight: var(--vga-blue); /* Blue */
+    --gem-text-dark: var(--vga-black);
+    --gem-text-light: var(--vga-white);
+    --gem-highlight: var(--vga-blue);
 
     /* Dithered pattern using VGA colors */
     --gem-desktop-pattern-color1: var(--vga-light-gray);
-    --gem-desktop-pattern-color2: var(--vga-dark-gray); /* Use dark gray for dither */
+    --gem-desktop-pattern-color2: var(--vga-dark-gray);
 
     /* Font */
     --gem-font-family: 'Geneva', 'Arial', sans-serif; /* Example font stack */
@@ -39,8 +39,6 @@
 
 /* Basic element styling using variables */
 body {
-    /* background-image: repeating-linear-gradient(...); */ /* Remove pattern from body */
-    /* background-size: 2px 2px; */ /* Remove pattern from body */
     font-family: var(--gem-font-family);
     font-size: var(--gem-font-size);
     color: var(--gem-text-dark);

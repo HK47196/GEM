@@ -2,7 +2,6 @@
 
 #taskbar {
     position: absolute;
-    /* bottom: 0; */ /* Move to top */
     top: 0;
     left: 0;
     width: 100%;
@@ -10,12 +9,8 @@
     background-color: var(--gem-bg-primary);
     /* Apply 3D border effect (inverted for top bar) */
     border-bottom: 1px solid var(--gem-window-border-inner);
-    /* border-top: 1px solid var(--gem-window-border-outer); */ /* No top border needed */
     border-left: none;
     border-right: none;
-    /* Inner black line */
-    /* outline: 1px solid var(--gem-window-border); */ /* May not be needed for top bar */
-    /* outline-offset: -1px; */
     display: flex;
     align-items: center;
     padding: 0 5px;

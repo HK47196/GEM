@@ -1,4 +1,3 @@
-// js/file-system.js
 // Logic for simulating a file system (virtual files/folders, persistence)
 
 class FileSystem {

@@ -86,7 +86,7 @@
 
 /* .window.active .window-titlebar { } */
 
-/* Resize Handles (Hidden by default) */
+/* Resize Handles */
 .window-resize-handle {
     position: absolute;
     background: transparent; /* Invisible */

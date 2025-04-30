@@ -1,4 +1,3 @@
-// js/desktop.js
 // Logic for the desktop environment (icon management, background, context menus)
 
 class Desktop {
@@ -61,4 +60,4 @@ class Desktop {
     // Methods for handling clicks, etc.
 }
 
-export default Desktop; // Enable module export
+export default Desktop;

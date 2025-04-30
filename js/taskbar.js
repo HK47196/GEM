@@ -1,4 +1,3 @@
-// js/taskbar.js
 // Logic for the taskbar (displaying open apps, clock, system controls)
 
 class Taskbar {

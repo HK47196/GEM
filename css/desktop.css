@@ -33,8 +33,6 @@
 .desktop-icon {
     width: 70px; /* Icon container width */
     height: 70px; /* Icon container height */
-    /* margin: 10px; */ /* Replaced by grid gap */
-    /* float: left; */ /* Replaced by grid */
     text-align: center;
     display: flex;
     flex-direction: column;

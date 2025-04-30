@@ -22,7 +22,6 @@ body {
     position: relative; /* Needed for absolute positioning of children */
     overflow: hidden; /* Clip content outside the screen bounds */
     border: 1px solid #000; /* Optional: border for the screen */
-    /* background-color: var(--vga-black); */ /* Remove default screen background, let desktop show through */
 }
 
 /* Ensure children fill the screen */
@@ -36,13 +35,11 @@ body {
 
 #taskbar {
     top: 0;
-    /* height and other styles remain */
 }
 
 #desktop {
     top: 20px; /* Below menu bar */
     height: calc(100% - 20px);
-    /* background styles remain */
 }
 
 #window-container {

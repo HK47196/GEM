@@ -1,4 +1,3 @@
-// js/window-manager.js
 // Logic for managing application windows (creation, movement, resizing, z-index)
 
 class WindowManager {
@@ -60,22 +59,21 @@ class WindowManager {
         const controls = document.createElement('div');
         controls.className = 'window-controls';
 
-        // Placeholder Controls (using text for now)
         const closeButton = document.createElement('button');
-        closeButton.className = 'close-button'; // Add class
-        closeButton.textContent = '[X]'; // Placeholder
+        closeButton.className = 'close-button';
+        closeButton.textContent = '[X]';
         closeButton.title = 'Close';
         closeButton.onclick = () => this.closeWindow(windowElement);
 
         const maximizeButton = document.createElement('button');
-        maximizeButton.className = 'maximize-button'; // Add class
-        maximizeButton.textContent = '[ ]'; // Placeholder
+        maximizeButton.className = 'maximize-button';
+        maximizeButton.textContent = '[ ]';
         maximizeButton.title = 'Maximize';
-        // maximizeButton.onclick = () => this.maximizeWindow(windowElement);
+        // maximizeButton.onclick = () => this.maxWindow(windowElement);
 
         const minimizeButton = document.createElement('button');
-        minimizeButton.className = 'minimize-button'; // Add class
-        minimizeButton.textContent = '[-]'; // Placeholder
+        minimizeButton.className = 'minimize-button';
+        minimizeButton.textContent = '[-]';
         minimizeButton.title = 'Minimize';
         // minimizeButton.onclick = () => this.minimizeWindow(windowElement);
 
@@ -101,7 +99,6 @@ class WindowManager {
 
         // Add focus handling
         windowElement.addEventListener('mousedown', (e) => {
-            // Also focus when starting drag from title bar
             this.focusWindow(windowElement);
         });
 
@@ -263,4 +260,4 @@ class WindowManager {
     // maximizeWindow(windowElement) { ... }
 }
 
-export default WindowManager; // Enable module export
+export default WindowManager;
