@@ -39,17 +39,8 @@
 
 /* Basic element styling using variables */
 body {
-    /* background-color: var(--gem-desktop-bg); */ /* Pattern replaces solid color */
-    /* background-image: var(--gem-desktop-pattern); */
-    /* Simple 2x2 pixel checkerboard pattern simulation */
-    background-image: repeating-linear-gradient(
-        45deg,
-        var(--gem-desktop-pattern-color1),
-        var(--gem-desktop-pattern-color1) 1px,
-        var(--gem-desktop-pattern-color2) 1px,
-        var(--gem-desktop-pattern-color2) 2px
-    );
-    background-size: 2px 2px;
+    /* background-image: repeating-linear-gradient(...); */ /* Remove pattern from body */
+    /* background-size: 2px 2px; */ /* Remove pattern from body */
     font-family: var(--gem-font-family);
     font-size: var(--gem-font-size);
     color: var(--gem-text-dark);

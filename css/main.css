@@ -22,7 +22,7 @@ body {
     position: relative; /* Needed for absolute positioning of children */
     overflow: hidden; /* Clip content outside the screen bounds */
     border: 1px solid #000; /* Optional: border for the screen */
-    background-color: var(--vga-black); /* Default screen background */
+    /* background-color: var(--vga-black); */ /* Remove default screen background, let desktop show through */
 }
 
 /* Ensure children fill the screen */

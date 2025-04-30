@@ -8,9 +8,15 @@
     width: 100%;
     /* Adjust for top menu bar */
     height: calc(100% - 20px);
-    /* background-color: var(--gem-desktop-bg); */ /* Defined in theme.css */
-    /* background-image: var(--gem-desktop-pattern); */ /* Defined in theme.css */
-    /* background-repeat: repeat; */
+    /* Apply the dither pattern here */
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--gem-desktop-pattern-color1),
+        var(--gem-desktop-pattern-color1) 1px,
+        var(--gem-desktop-pattern-color2) 1px,
+        var(--gem-desktop-pattern-color2) 2px
+    );
+    background-size: 2px 2px;
     overflow: hidden; /* Hide anything that might overflow */
     padding: 10px; /* Padding for icons */
     /* Grid layout for icons */
